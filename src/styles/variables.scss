@@ -1,0 +1,255 @@
+
+$accent:        #6366f1;   
+$accent-hover:  #4f46e5;
+$accent-light:  #818cf8;
+$accent-subtle: rgba(99, 102, 241, 0.12);
+$success: #10b981;
+$warning: #f59e0b;
+$danger:  #ef4444;
+$info:    #3b82f6;
+$dark-bg:           #0a0a0f;
+$dark-bg-secondary: #111118;
+$dark-bg-card:      #16161f;
+$dark-bg-elevated:  #1c1c28;
+$dark-border:       rgba(255,255,255,0.07);
+$dark-border-hover: rgba(255,255,255,0.14);
+$dark-text:         #f0f0f5;
+$dark-text-secondary: #8b8b9e;
+$dark-text-muted:   #4a4a60;
+$light-bg:           #f8f8fc;
+$light-bg-secondary: #ffffff;
+$light-bg-card:      #ffffff;
+$light-bg-elevated:  #f0f0f8;
+$light-border:       rgba(0,0,0,0.09);
+$light-border-hover: rgba(0,0,0,0.18);
+$light-text:         #111118;
+$light-text-secondary: #6b6b80;
+$light-text-muted:   #a0a0b8;
+$white:              #ffffff;
+$primary-red:        $accent;
+$primary-red-dark:   $accent-hover;
+$primary-red-light:  $accent-light;
+$primary-red-lighter:#c7d2fe;
+$light-bg-compat:    $light-bg;
+$gray-light:         $light-border;
+$gray-medium:        $light-text-secondary;
+$gray-dark:          $light-text;
+$dark-bg-compat:     $dark-bg;
+$gradient-primary:       linear-gradient(135deg, $accent 0%, #8b5cf6 100%);
+$gradient-primary-light: linear-gradient(135deg, $accent-light 0%, $accent 100%);
+$gradient-card:          linear-gradient(145deg, $dark-bg-card 0%, $dark-bg-elevated 100%);
+$gradient-dark:          linear-gradient(135deg, $dark-bg-secondary 0%, $dark-bg 100%);
+$shadow-sm:  0 1px 3px  rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.08);
+$shadow-md:  0 4px 12px rgba(0,0,0,0.18);
+$shadow-lg:  0 8px 28px rgba(0,0,0,0.22);
+$shadow-xl:  0 16px 40px rgba(0,0,0,0.28);
+$shadow-accent: 0 4px 20px rgba(99,102,241,0.3);
+
+$shadow-red-sm: 0 2px 8px  rgba(99,102,241,0.2);
+$shadow-red-md: 0 4px 16px rgba(99,102,241,0.25);
+$shadow-red-lg: 0 8px 28px rgba(99,102,241,0.2);
+$font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Inter', sans-serif;
+$font-size-base: 14px;
+$font-size-sm:   13px;
+$font-size-lg:   16px;
+$font-size-xl:   18px;
+$font-size-2xl:  24px;
+$font-size-3xl:  32px;
+
+$fw-regular:  400;
+$fw-medium:   500;
+$fw-semibold: 600;
+$fw-bold:     700;
+
+$space-xs:  4px;
+$space-sm:  8px;
+$space-md:  12px;
+$space-lg:  16px;
+$space-xl:  20px;
+$space-2xl: 32px;
+$space-3xl: 48px;
+
+$border-radius-sm: 6px;
+$border-radius-md: 8px;
+$border-radius-lg: 12px;
+$border-radius-xl: 16px;
+$border-radius-full: 999px;
+
+$transition-fast: 0.15s ease;
+$transition-base: 0.25s ease;
+$transition-slow: 0.4s ease;
+
+$bp-mobile:  480px;
+$bp-tablet:  768px;
+$bp-desktop: 1024px;
+$bp-wide:    1400px;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin glassmorphism-dark {
+  background: rgba($dark-bg-card, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid $dark-border;
+}
+
+@mixin glassmorphism-light {
+  background: rgba($white, 0.9);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid $light-border;
+}
+
+@mixin card-dark {
+  background: $dark-bg-card;
+  border: 1px solid $dark-border;
+  border-radius: $border-radius-xl;
+  transition: all $transition-base;
+  &:hover {
+    border-color: $dark-border-hover;
+    box-shadow: $shadow-md;
+  }
+}
+
+@mixin card-light {
+  background: $white;
+  border: 1px solid $light-border;
+  border-radius: $border-radius-xl;
+  box-shadow: $shadow-sm;
+  transition: all $transition-base;
+  &:hover {
+    border-color: $light-border-hover;
+    box-shadow: $shadow-md;
+  }
+}
+
+@mixin card {
+  border-radius: $border-radius-xl;
+  transition: all $transition-base;
+
+  [data-theme='light'] & {
+    background: $white;
+    border: 1px solid $light-border;
+    box-shadow: $shadow-sm;
+    &:hover { border-color: $light-border-hover; box-shadow: $shadow-md; }
+  }
+
+  [data-theme='dark'] & {
+    background: $dark-bg-card;
+    border: 1px solid $dark-border;
+    &:hover { border-color: $dark-border-hover; box-shadow: $shadow-md; }
+  }
+}
+
+@mixin button-primary {
+  background: $accent;
+  color: $white;
+  border: none;
+  border-radius: $border-radius-md;
+  padding: 9px $space-lg;
+  font-size: $font-size-sm;
+  font-weight: $fw-semibold;
+  cursor: pointer;
+  transition: all $transition-base;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover:not(:disabled) {
+    background: $accent-hover;
+    box-shadow: $shadow-accent;
+    transform: translateY(-1px);
+  }
+
+  &:active { transform: translateY(0); }
+
+  &:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+@mixin button-secondary {
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+  border-radius: $border-radius-md;
+  padding: 9px $space-lg;
+  font-size: $font-size-sm;
+  font-weight: $fw-medium;
+  cursor: pointer;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all $transition-base;
+
+  &:hover {
+    border-color: var(--border-hover);
+    color: var(--text);
+    background: var(--bg-elevated);
+  }
+}
+
+@mixin input-field {
+  padding: 0 $space-md;
+  height: 36px;
+  border: 1px solid var(--border);
+  border-radius: $border-radius-md;
+  font-size: $font-size-sm;
+  font-family: $font-primary;
+  background: var(--bg-card);
+  color: var(--text);
+  transition: all $transition-base;
+
+  &:focus {
+    outline: none;
+    border-color: $accent;
+    box-shadow: 0 0 0 3px rgba($accent, 0.15);
+  }
+
+  &::placeholder { color: var(--text-muted); }
+}
+
+@mixin responsive-grid($columns) {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax($columns, 1fr));
+  gap: $space-xl;
+}
+
+@mixin text-truncate($lines: 1) {
+  @if $lines == 1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+@mixin media-query($breakpoint) {
+  @if $breakpoint == "mobile"  { @media (max-width: $bp-mobile)  { @content; } }
+  @else if $breakpoint == "tablet"  { @media (max-width: $bp-tablet)  { @content; } }
+  @else if $breakpoint == "desktop" { @media (max-width: $bp-desktop) { @content; } }
+}

@@ -1,0 +1,66 @@
+@import '../../styles/variables.scss';
+
+.language-switcher {
+  display: flex;
+  gap: 6px;
+  padding: 4px;
+  border-radius: 14px;
+
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+}
+
+.lang-btn {
+  height: 34px;
+  padding: 0 12px;
+
+  border-radius: 10px;
+  border: 1px solid transparent;
+
+  background: transparent;
+  color: var(--text-secondary);
+
+  font-size: $font-size-sm;
+  font-weight: $fw-medium;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+.lang-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  transform: translateY(-1px);
+}
+.lang-btn.active {
+  background: var(--bg-card);
+  color: var(--text);
+
+  border: 1px solid rgba($accent, 0.4);
+
+  box-shadow:
+    0 6px 16px rgba($accent, 0.15),
+    inset 0 0 0 1px rgba($accent, 0.2);
+
+  transform: scale(1.05);
+}
+.lang-btn.active::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 20%;
+  width: 60%;
+  height: 2px;
+
+  background: $accent;
+  border-radius: 10px;
+}
+.lang-btn:active {
+  transform: scale(0.97);
+}

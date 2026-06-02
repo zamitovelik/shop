@@ -1,0 +1,131 @@
+@import './variables.scss';
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: $light-bg;
+}
+
+.app-header {
+  background: $gradient-primary;
+  color: $white;
+  padding: $space-lg $space-xl;
+  box-shadow: $shadow-red-lg;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  
+  gap: $space-xl;
+
+  .header-content {
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 150px;
+
+    h1 {
+      font-size: $font-size-2xl;
+      margin-bottom: $space-sm;
+      font-weight: $fw-bold;
+      letter-spacing: 1px;
+
+      a {
+        color: $white;
+        transition: opacity $transition-base;
+
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+    }
+
+    p {
+      font-size: 12px;
+      opacity: 0.95;
+      margin: 0;
+      font-weight: $fw-regular;
+    }
+  }
+
+  .header-tools {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $space-md;
+    flex: 1;
+  }
+}
+
+.main-container {
+  flex: 1;
+  max-width: $bp-wide;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 $space-xl;
+}
+
+.app-footer {
+  background: $gray-dark;
+  color: $gray-light;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: $space-2xl $space-xl;
+  margin-top: $space-3xl;
+  font-size: 14px;
+}
+
+// Dark theme support
+[data-theme='dark'] {
+  .app {
+    background-color: $dark-bg;
+  }
+
+  .app-header {
+    background: linear-gradient(135deg, #1a1e23 0%, #0f1419 100%);
+    border-bottom: 1px solid $dark-border;
+  }
+
+  .app-footer {
+    background: $dark-bg-secondary;
+    color: $dark-text-secondary;
+    border-top: 1px solid $dark-border;
+  }
+
+  .main-container {
+    background-color: $dark-bg;
+  }
+}
+
+// Responsive
+@include media-query("mobile") {
+  .app-header {
+    flex-direction: column;
+    padding: $space-md;
+    gap: $space-md;
+
+    .header-content {
+      min-width: auto;
+
+      h1 {
+        font-size: 20px;
+        margin-bottom: 2px;
+      }
+
+      p {
+        font-size: 10px;
+      }
+    }
+
+    .header-tools {
+      width: 100%;
+      gap: $space-sm;
+    }
+  }
+
+  .main-container {
+    padding: 0 $space-md;
+  }
+}

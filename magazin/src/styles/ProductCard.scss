@@ -1,0 +1,196 @@
+@import './variables.scss';
+
+.product-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.product-card {
+  
+  border-radius: $border-radius-lg;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: $white;
+  border: 1px solid $gray-light;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: $shadow-red-md;
+    border-color: $primary-red-lighter;
+  }
+}
+
+.product-image-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(135deg, $gray-light 0%, #e8eaed 100%);
+  overflow: hidden;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform $transition-base;
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.08);
+}
+
+.discount-badge {
+  position: absolute;
+  top: $space-lg;
+  right: $space-lg;
+  background: $gradient-primary;
+  color: $white;
+  padding: $space-sm $space-md;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: $fw-bold;
+  z-index: 10;
+  box-shadow: $shadow-red-sm;
+}
+
+.product-info {
+  padding: $space-lg;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-title {
+  font-size: 16px;
+  font-weight: $fw-semibold;
+  color: $gray-dark;
+  margin-bottom: $space-md;
+  line-height: 1.4;
+  height: 38px;
+  @include text-truncate(2);
+}
+
+.product-description {
+  font-size: 12px;
+  color: $gray-medium;
+  margin-bottom: $space-lg;
+  flex-grow: 1;
+  min-height: 35px;
+  @include text-truncate(2);
+}
+
+.product-stock {
+  font-size: 12px;
+  color: $gray-dark;
+  margin-bottom: $space-lg;
+  font-weight: $fw-medium;
+
+  strong {
+    color: $primary-red;
+  }
+}
+
+.product-price-section {
+  margin-bottom: $space-lg;
+}
+
+.prices {
+  display: flex;
+  gap: $space-lg;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.original-price {
+  font-size: 12px;
+  color: $gray-medium;
+  text-decoration: line-through;
+}
+
+.discounted-price {
+  font-size: 28px;
+  font-weight: $fw-bold;
+  color: $primary-red;
+}
+
+.view-details-btn {
+  width: 100%;
+  padding: $space-md $space-lg;
+  background: $gradient-primary;
+  color: $white;
+  border-radius: $border-radius-md;
+  font-weight: $fw-semibold;
+  border: none;
+  cursor: pointer;
+  transition: all $transition-base;
+  box-shadow: $shadow-red-sm;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-red-md;
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+@include media-query("tablet") {
+  .product-card {
+    border-radius: $border-radius-md;
+  }
+}
+
+@include media-query("mobile") {
+  .product-image-container {
+    height: 150px;
+  }
+
+  .product-info {
+    padding: $space-md;
+  }
+
+  .product-title {
+    font-size: 14px;
+    height: 32px;
+  }
+
+  .product-description {
+    font-size: 11px;
+    min-height: 30px;
+  }
+}
+
+// Dark theme support
+[data-theme='dark'] {
+  .product-card {
+    background: $dark-card-bg;
+    border-color: $dark-border;
+
+    &:hover {
+      border-color: $primary-red-lighter;
+    }
+  }
+
+  .product-image-container {
+    background: linear-gradient(135deg, #2a2f35 0%, #1e2329 100%);
+  }
+
+  .product-title {
+    color: $dark-text;
+  }
+
+  .product-description {
+    color: $dark-text-secondary;
+  }
+
+  .product-stock {
+    color: $dark-text;
+  }
+
+  .discounted-price {
+    color: $primary-red-light;
+  }
+}

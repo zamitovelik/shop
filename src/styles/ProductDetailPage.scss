@@ -1,0 +1,167 @@
+@import './variables.scss';
+
+.product-detail-page {
+  padding: $space-2xl 0 $space-3xl;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.back-link {
+  @include button-secondary;
+  margin-bottom: $space-2xl;
+  text-decoration: none;
+  display: inline-flex;
+}
+
+.product-detail-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $space-3xl;
+  align-items: start;
+}
+
+.images-section { position: sticky; top: 76px; }
+
+.main-swiper {
+  border-radius: $border-radius-lg;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  margin-bottom: $space-md;
+}
+
+.main-image {
+  width: 100%; height: 360px;
+  object-fit: contain; padding: 20px;
+}
+
+.thumbs-swiper {
+  .thumb-image {
+    width: 100%; height: 70px;
+    object-fit: contain; padding: 6px;
+    border-radius: $border-radius-sm;
+    border: 2px solid var(--border);
+    background: var(--bg-elevated);
+    cursor: pointer;
+    transition: border-color $transition-fast;
+    &:hover { border-color: var(--border-hover); }
+  }
+  .swiper-slide-thumb-active .thumb-image { border-color: $accent; }
+}
+
+.single-image {
+  width: 100%; height: 360px;
+  object-fit: contain; padding: 20px;
+  border-radius: $border-radius-lg;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+}
+
+.details-section { display: flex; flex-direction: column; gap: $space-lg; }
+
+.detail-title {
+  font-size: 22px; font-weight: $fw-bold;
+  color: var(--text); line-height: 1.3;
+}
+
+.detail-category {
+  display: inline-block;
+  background: rgba($accent, 0.1);
+  color: $accent;
+  border: 1px solid rgba($accent, 0.25);
+  padding: 3px 10px; border-radius: $border-radius-full;
+  font-size: 12px; font-weight: $fw-semibold;
+  text-transform: capitalize;
+}
+
+.detail-brand { font-size: $font-size-sm; color: var(--text-secondary); }
+.detail-description { font-size: $font-size-sm; color: var(--text-secondary); line-height: 1.7; }
+
+.price-section {
+  background: var(--bg-elevated);
+  border-radius: $border-radius-lg;
+  padding: $space-lg;
+  border: 1px solid var(--border);
+}
+
+.prices { display: flex; align-items: baseline; gap: $space-md; flex-wrap: wrap; }
+
+.original-price { font-size: $font-size-sm; color: var(--text-muted); text-decoration: line-through; }
+
+.discounted-price {
+  font-size: 28px; font-weight: $fw-bold; color: var(--text);
+}
+
+.discount-info {
+  background: $accent; color: #fff;
+  font-size: 12px; font-weight: $fw-bold;
+  padding: 3px 10px; border-radius: $border-radius-full;
+}
+
+.stock-section {
+  .stock-status { display: flex; align-items: center; gap: $space-sm; }
+  .stock-badge {
+    padding: 3px 10px; border-radius: $border-radius-full;
+    font-size: 12px; font-weight: $fw-semibold;
+  }
+  .in-stock .stock-badge {
+    background: rgba($success, 0.1); color: $success; border: 1px solid rgba($success, 0.25);
+  }
+  .out-of-stock .stock-badge {
+    background: rgba($danger, 0.1); color: $danger; border: 1px solid rgba($danger, 0.25);
+  }
+  .stock-count { font-size: $font-size-sm; color: var(--text-secondary); }
+}
+
+.rating-section .rating {
+  font-size: 16px; font-weight: $fw-semibold;
+  color: $warning;
+}
+
+.actions { display: flex; flex-direction: column; gap: $space-md; }
+
+.quantity-selector {
+  display: flex; align-items: center; gap: $space-sm;
+  label { font-size: $font-size-sm; color: var(--text-secondary); font-weight: $fw-medium; min-width: 90px; }
+}
+
+.qty-decrease, .qty-increase {
+  width: 36px; height: 36px;
+  @include flex-center;
+  border: 1px solid var(--border);
+  border-radius: $border-radius-md;
+  background: var(--bg-elevated);
+  color: var(--text-secondary);
+  font-size: 18px; cursor: pointer;
+  transition: all $transition-fast;
+  &:hover:not(:disabled) { border-color: $accent; color: $accent; }
+  &:disabled { opacity: 0.35; cursor: not-allowed; }
+}
+
+.qty-field {
+  @include input-field;
+  width: 56px; text-align: center;
+  font-weight: $fw-bold;
+}
+
+.add-to-cart-btn {
+  @include button-primary;
+  height: 42px; font-size: $font-size-lg;
+}
+
+.error-page {
+  display: flex; flex-direction: column; align-items: center;
+  gap: $space-xl; padding: 80px; text-align: center;
+  color: $danger;
+  a { @include button-secondary; text-decoration: none; }
+}
+
+.loading-detail {
+  display: flex; align-items: center; justify-content: center;
+  padding: 80px; color: var(--text-secondary); font-size: $font-size-lg;
+}
+
+@include media-query("tablet") {
+  .product-detail-container { grid-template-columns: 1fr; }
+  .images-section { position: static; }
+}

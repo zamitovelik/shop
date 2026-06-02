@@ -1,0 +1,44 @@
+@import './variables.scss';
+
+.theme-switcher {
+  padding: $space-sm $space-md;
+  background: rgba($white, 0.2);
+  color: $white;
+  border: 2px solid rgba($white, 0.3);
+  border-radius: $border-radius-md;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all $transition-base;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &:hover {
+    background: rgba($white, 0.3);
+    border-color: rgba($white, 0.5);
+    transform: scale(1.1);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+[data-theme='dark'] {
+  .theme-switcher {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.15);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+}
+
+@include media-query("mobile") {
+  .theme-switcher {
+    padding: $space-xs $space-sm;
+    font-size: 14px;
+  }
+}

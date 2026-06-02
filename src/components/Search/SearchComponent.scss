@@ -1,0 +1,68 @@
+@import '../../styles/variables.scss';
+
+.search-form {
+  flex: 1;
+  max-width: 360px;
+}
+
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  @include input-field;
+  width: 100%;
+  padding-right: 72px;
+  border-radius: $border-radius-full;
+  font-size: $font-size-sm;
+}
+
+.search-clear {
+  position: absolute;
+  right: 38px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: none;
+  background: var(--bg-elevated);
+  color: var(--text-muted);
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all $transition-fast;
+
+  &:hover {
+    background: var(--border-hover);
+    color: var(--text);
+  }
+}
+
+.search-button {
+  position: absolute;
+  right: 4px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: none;
+  background: $accent;
+  color: #fff;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all $transition-fast;
+
+  &:hover {
+    background: $accent-hover;
+    box-shadow: $shadow-accent;
+  }
+}
+.search-button-img {
+  max-width: 40px;
+  width: 100%;
+}

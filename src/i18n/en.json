@@ -1,0 +1,104 @@
+{
+  "header": {
+    "title": "ShopHub",
+    "subtitle": "Premium Products, Great Prices"
+  },
+  "categories": {
+    "title": "Categories",
+    "all": "All Products"
+  },
+  "nav": {
+    "catalog": "Catalog",
+    "cart": "Cart"
+  },
+  "products": {
+    "page_title": "Our Products",
+    "page_subtitle": "Discover our collection of quality products",
+    "loading": "Loading products...",
+    "error": "Failed to load products",
+    "no_products": "No products found",
+    "sort_by": "Sort By:",
+    "sort_default": "Default",
+    "sort_title": "Title (A-Z)",
+    "sort_price": "Price",
+    "sort_stock": "Stock",
+    "order": "Order:",
+    "order_asc": "Ascending ↑",
+    "order_desc": "Descending ↓",
+    "discount": "Save {{percent}}%",
+    "view_details": "View Details",
+    "in_stock": "In Stock",
+    "stock_label": "Stock:",
+    "available": "{{count}} available",
+    "out_of_stock": "Out of Stock"
+  },
+  "product_detail": {
+    "loading": "Loading product details...",
+    "error": "Product not found",
+    "back": "← Back to Products",
+    "category": "Category:",
+    "brand": "Brand:",
+    "quantity": "Quantity:",
+    "add_to_cart": "Add to Cart",
+    "added": "✓ Added to Cart!",
+    "in_stock": "In Stock",
+    "out_of_stock": "Out of Stock"
+  },
+  "search": {
+    "placeholder": "Search products...",
+    "page_title": "Search Results",
+    "query": "Results for \"{{query}}\"",
+    "count": "Found {{count}} products",
+    "no_results": "No products found",
+    "try_again": "Try Another Search",
+    "back_to_home": "← Back to Home"
+  },
+  "cart": {
+    "page_title": "Shopping Cart",
+    "items": "{{count}} items in cart",
+    "item_singular": "{{count}} item in cart",
+    "empty_title": "Your cart is empty",
+    "empty_message": "Add some products to get started!",
+    "continue_shopping": "Continue Shopping",
+    "remove": "🗑️",
+    "subtotal": "Subtotal",
+    "items_count": "Items ({{count}}):",
+    "shipping": "Shipping",
+    "free": "FREE",
+    "tax": "Tax (10%):",
+    "total": "Total",
+    "checkout": "Proceed to Checkout",
+    "clear_cart": "Clear Cart",
+    "order_summary": "Order Summary"
+  },
+  "notifications": {
+    "added_to_cart": "Added to cart!",
+    "removed_from_cart": "Removed from cart",
+    "cart_cleared": "Cart cleared"
+  },
+  "buttons": {
+    "search": "🔍",
+    "clear": "✕"
+  },
+  "footer": {
+    "copyright": "© 2026 LSHOP. All rights reserved."
+  },
+  "seemore": {
+    "search": "View more"
+  },
+  "new": {
+    "shirts": "New items"
+  },
+  "trend": {
+    "now": "In trends"
+  },
+  "all": {
+    "items": "All items"
+  },
+  "hero": {
+    "sale": "discounts up to 50%",
+    "new": "New collections",
+    "top": "Top items on the week"
+  }
+  
+}

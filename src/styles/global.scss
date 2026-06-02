@@ -1,0 +1,60 @@
+@import './variables.scss';
+
+
+:root, [data-theme='dark'] {
+  --bg:             #{$dark-bg};
+  --bg-secondary:   #{$dark-bg-secondary};
+  --bg-card:        #{$dark-bg-card};
+  --bg-elevated:    #{$dark-bg-elevated};
+  --border:         #{$dark-border};
+  --border-hover:   #{$dark-border-hover};
+  --text:           #{$dark-text};
+  --text-secondary: #{$dark-text-secondary};
+  --text-muted:     #{$dark-text-muted};
+  --header-bg:      rgba(10, 10, 15, 0.85);
+  --card-shadow:    0 1px 3px rgba(0,0,0,0.4);
+  --card-shadow-hover: 0 8px 24px rgba(0,0,0,0.5);
+}
+
+[data-theme='light'] {
+  --bg:             #{$light-bg};
+  --bg-secondary:   #{$light-bg-secondary};
+  --bg-card:        #{$light-bg-card};
+  --bg-elevated:    #{$light-bg-elevated};
+  --border:         #{$light-border};
+  --border-hover:   #{$light-border-hover};
+  --text:           #{$light-text};
+  --text-secondary: #{$light-text-secondary};
+  --text-muted:     #{$light-text-muted};
+  --header-bg:      rgba(255, 255, 255, 0.88);
+  --card-shadow:    0 1px 4px rgba(0,0,0,0.07), 0 4px 12px rgba(0,0,0,0.05);
+  --card-shadow-hover: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  font-family: $font-primary;
+  background: var(--bg);
+  color: var(--text);
+  font-size: $font-size-base;
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background $transition-base, color $transition-base;
+}
+
+a { text-decoration: none; color: inherit; transition: color $transition-base; }
+button { cursor: pointer; border: none; font-family: $font-primary; font-size: $font-size-base; }
+input, select, textarea { font-family: $font-primary; }
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--border-hover);
+  border-radius: 10px;
+  &:hover { background: $accent; }
+}
+
+::selection { background: rgba($accent, 0.3); color: $white; }

@@ -1,0 +1,104 @@
+{
+  "header": {
+    "title": "ShopHub",
+    "subtitle": "Премиум товары, отличные цены"
+  },
+  "categories": {
+    "title": "Категории",
+    "all": "Все товары"
+  },
+  "nav": {
+    "catalog": "Каталог",
+    "cart": "Корзина"
+  },
+  "products": {
+    "page_title": "Наши товары",
+    "page_subtitle": "Откройте для себя нашу коллекцию качественных товаров",
+    "loading": "Загрузка товаров...",
+    "error": "Ошибка загрузки товаров",
+    "no_products": "Товары не найдены",
+    "sort_by": "Сортировать по:",
+    "sort_default": "По умолчанию",
+    "sort_title": "Названию (А-Я)",
+    "sort_price": "Цене",
+    "sort_stock": "Наличию",
+    "order": "Порядок:",
+    "order_asc": "По возрастанию ↑",
+    "order_desc": "По убыванию ↓",
+    "discount": "Скидка {{percent}}%",
+    "view_details": "Подробнее",
+    "in_stock": "В наличии",
+    "stock_label": "Склад:",
+    "available": "{{count}} шт.",
+    "out_of_stock": "Нет в наличии"
+  },
+  "product_detail": {
+    "loading": "Загрузка деталей товара...",
+    "error": "Товар не найден",
+    "back": "← Вернуться к товарам",
+    "category": "Категория:",
+    "brand": "Бренд:",
+    "quantity": "Количество:",
+    "add_to_cart": "В корзину",
+    "added": "✓ Добавлено в корзину!",
+    "in_stock": "В наличии",
+    "out_of_stock": "Нет в наличии"
+  },
+  "search": {
+    "placeholder": "Поиск товаров...",
+    "page_title": "Результаты поиска",
+    "query": "Результаты для \"{{query}}\"",
+    "count": "Найдено {{count}} товаров",
+    "no_results": "Товары не найдены",
+    "try_again": "Попробовать другой поиск",
+    "back_to_home": "← На главную"
+  },
+  "cart": {
+    "page_title": "Корзина",
+    "items": " товаров в корзине",
+    "item_singular": " товар в корзине",
+    "empty_title": "Ваша корзина пуста",
+    "empty_message": "Добавьте товары, чтобы начать!",
+    "continue_shopping": "Продолжить покупки",
+    "remove": "🗑️",
+    "subtotal": "Сумма",
+    "items_count": "Товары ({{count}}):",
+    "shipping": "Доставка",
+    "free": "БЕСПЛАТНО",
+    "tax": "Налог (10%):",
+    "total": "Итого",
+    "checkout": "Оформить заказ",
+    "clear_cart": "Очистить корзину",
+    "order_summary": "Итог заказа"
+  },
+  "notifications": {
+    "added_to_cart": "Добавлено в корзину!",
+    "removed_from_cart": "Удалено из корзины",
+    "cart_cleared": "Корзина очищена"
+  },
+  "buttons": {
+    "search": "🔍",
+    "clear": "✕"
+  },
+  "footer": {
+    "copyright": "© 2026 LSHOP. Все права защищены."
+  },
+  "seemore": {
+    "search": "Посмотреть еще"
+  },
+  "new": {
+    "shirts": "Посмотреть еще"
+  },
+  "trend": {
+    "now": "Посмотреть еще"
+  },
+  "all": {
+    "items": "Посмотреть еще"
+  },
+  "hero": {
+    "sale": "Скидки до 50%",
+    "new": "Новые коллекции",
+    "top": "Топ товары недели"
+  }
+}
+

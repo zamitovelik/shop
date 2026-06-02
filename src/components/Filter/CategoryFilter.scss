@@ -1,0 +1,55 @@
+@import '../../styles/variables.scss';
+.category-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.category-title {
+  font-size: 11px;
+  font-weight: $fw-bold;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: $space-sm $space-md;
+  margin-bottom: $space-xs;
+}
+
+.category-item {
+  display: flex;
+  align-items: center;
+  gap: $space-sm;
+  width: 100%;
+  padding: 8px $space-md;
+  border-radius: $border-radius-md;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: $font-size-sm;
+  font-weight: $fw-medium;
+  cursor: pointer;
+  transition: all $transition-fast;
+  text-align: left;
+
+  &:hover {
+    background: var(--bg-elevated);
+    color: var(--text);
+  }
+
+  &.active {
+    background: rgba($accent, 0.1);
+    color: $accent;
+    font-weight: $fw-semibold;
+  }
+
+  .cat-icon {
+    font-size: 15px;
+    flex-shrink: 0;
+    width: 20px;
+    text-align: center;
+  }
+
+  .cat-label {
+    @include text-truncate(1);
+  }
+}

@@ -1,0 +1,52 @@
+@import '../../styles/variables.scss';
+
+.pagination-container {
+  @include flex-center;
+  padding: $space-2xl 0;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.page-link {
+  height: 36px;
+  min-width: 36px;
+  padding: 0 $space-md;
+  @include flex-center;
+  border-radius: $border-radius-md;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  font-size: $font-size-sm;
+  font-weight: $fw-medium;
+  cursor: pointer;
+  transition: all $transition-fast;
+  white-space: nowrap;
+
+  &:hover {
+    border-color: var(--border-hover);
+    color: var(--text);
+    background: var(--bg-elevated);
+  }
+
+  &.active {
+    background: $accent;
+    border-color: $accent;
+    color: $white;
+    font-weight: $fw-semibold;
+    box-shadow: $shadow-accent;
+  }
+}
+
+.page-ellipsis {
+  height: 36px;
+  min-width: 36px;
+  @include flex-center;
+  color: var(--text-muted);
+  font-size: $font-size-sm;
+}

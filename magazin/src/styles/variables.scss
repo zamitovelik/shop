@@ -1,0 +1,227 @@
+// ============================================
+// COLOR VARIABLES - RED THEME
+// ============================================
+
+// Primary Colors - Red Palette
+$primary-red: #e63946;        // Main red
+$primary-red-dark: #a4161a;   // Dark red
+$primary-red-light: #ff6b7a;  // Light red
+$primary-red-lighter: #ffb3ba; // Very light red
+
+// Light Theme Colors
+$white: #ffffff;
+$light-bg: #f7f8fa;
+$gray-light: #e8eaed;
+$gray-medium: #9a9a9a;
+$gray-dark: #2c3e50;
+
+// Dark Theme Colors
+$dark-bg: #0f1419;
+$dark-bg-secondary: #1a1e23;
+$dark-text: #f0f0f0;
+$dark-text-secondary: #b0b0b0;
+$dark-card-bg: #1e2329;
+$dark-border: #2a2f35;
+
+// Accent Colors
+$success: #27ae60;
+$warning: #f39c12;
+$danger: #e74c3c;
+$info: #3498db;
+
+// Gradients
+$gradient-primary: linear-gradient(135deg, #e63946 0%, #a4161a 100%);
+$gradient-primary-light: linear-gradient(135deg, #ff6b7a 0%, #e63946 100%);
+$gradient-dark: linear-gradient(135deg, #2c3e50 0%, #1a1e23 100%);
+
+// ============================================
+// TYPOGRAPHY VARIABLES
+// ============================================
+$font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$font-size-base: 14px;
+$font-size-lg: 16px;
+$font-size-xl: 18px;
+$font-size-2xl: 28px;
+$font-size-3xl: 36px;
+
+// Font Weights
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semibold: 600;
+$fw-bold: 700;
+
+// ============================================
+// SPACING VARIABLES
+// ============================================
+$space-xs: 5px;
+$space-sm: 8px;
+$space-md: 12px;
+$space-lg: 15px;
+$space-xl: 20px;
+$space-2xl: 30px;
+$space-3xl: 40px;
+
+// ============================================
+// BORDER & SHADOW VARIABLES
+// ============================================
+$border-radius-sm: 6px;
+$border-radius-md: 8px;
+$border-radius-lg: 12px;
+
+$shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+$shadow-md: 0 4px 12px rgba(0, 0, 0, 0.12);
+$shadow-lg: 0 8px 20px rgba(0, 0, 0, 0.15);
+$shadow-xl: 0 12px 30px rgba(0, 0, 0, 0.2);
+
+$shadow-red-sm: 0 2px 8px rgba(230, 57, 70, 0.15);
+$shadow-red-md: 0 4px 16px rgba(230, 57, 70, 0.2);
+$shadow-red-lg: 0 8px 24px rgba(230, 57, 70, 0.25);
+
+// ============================================
+// TRANSITION & ANIMATION
+// ============================================
+$transition-fast: 0.2s ease;
+$transition-base: 0.3s ease;
+$transition-slow: 0.5s ease;
+
+// ============================================
+// BREAKPOINTS
+// ============================================
+$bp-mobile: 480px;
+$bp-tablet: 768px;
+$bp-desktop: 1024px;
+$bp-wide: 1400px;
+
+// ============================================
+// MIXINS
+// ============================================
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin button-primary {
+  background: $gradient-primary;
+  color: $white;
+  border: none;
+  border-radius: $border-radius-md;
+  padding: $space-lg $space-xl;
+  font-weight: $fw-semibold;
+  cursor: pointer;
+  transition: all $transition-base;
+  box-shadow: $shadow-red-sm;
+
+  &:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: $shadow-red-md;
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+@mixin button-secondary {
+  background: transparent;
+  color: $primary-red;
+  border: 2px solid $primary-red;
+  border-radius: $border-radius-md;
+  padding: $space-md $space-lg;
+  font-weight: $fw-semibold;
+  cursor: pointer;
+  transition: all $transition-base;
+
+  &:hover {
+    background: rgba($primary-red, 0.05);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+@mixin card {
+  background: $white;
+  border-radius: $border-radius-lg;
+  box-shadow: $shadow-sm;
+  transition: all $transition-base;
+
+  &:hover {
+    box-shadow: $shadow-md;
+  }
+}
+
+@mixin input-field {
+  padding: $space-md $space-lg;
+  border: 2px solid $gray-light;
+  border-radius: $border-radius-sm;
+  font-size: $font-size-base;
+  font-family: $font-primary;
+  background: $white;
+  color: $gray-dark;
+  transition: border-color $transition-base;
+
+  &:focus {
+    outline: none;
+    border-color: $primary-red;
+    box-shadow: 0 0 0 3px rgba($primary-red, 0.1);
+  }
+
+  &::placeholder {
+    color: $gray-medium;
+  }
+}
+
+@mixin responsive-grid($columns) {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax($columns, 1fr));
+  gap: $space-xl;
+}
+
+@mixin text-truncate($lines: 1) {
+  @if $lines == 1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+@mixin media-query($breakpoint) {
+  @if $breakpoint == "mobile" {
+    @media (max-width: $bp-mobile) {
+      @content;
+    }
+  } @else if $breakpoint == "tablet" {
+    @media (max-width: $bp-tablet) {
+      @content;
+    }
+  } @else if $breakpoint == "desktop" {
+    @media (max-width: $bp-desktop) {
+      @content;
+    }
+  }
+}

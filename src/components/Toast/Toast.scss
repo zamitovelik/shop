@@ -1,0 +1,27 @@
+@import '../../styles/variables.scss';
+
+.toast-container {
+  position: fixed; bottom: $space-2xl; right: $space-2xl;
+  z-index: 9999; display: flex; flex-direction: column; gap: $space-sm;
+}
+
+.toast {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: $border-radius-lg;
+  padding: 12px $space-lg;
+  font-size: $font-size-sm; font-weight: $fw-medium;
+  min-width: 220px; box-shadow: $shadow-lg;
+  animation: slideIn 0.25s ease;
+  display: flex; align-items: center; gap: $space-sm;
+  color: var(--text);
+
+  &.success { border-left: 3px solid $success; }
+  &.error   { border-left: 3px solid $danger;  }
+  &.info    { border-left: 3px solid $accent;   }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(110%); opacity: 0; }
+  to   { transform: translateX(0);    opacity: 1; }
+}

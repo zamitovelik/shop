@@ -1,0 +1,74 @@
+{
+  "header": {
+    "title": "ShopHub",
+    "subtitle": "Premium Products, Great Prices"
+  },
+  "products": {
+    "page_title": "Our Products",
+    "page_subtitle": "Discover our collection of quality products",
+    "loading": "Loading products...",
+    "error": "Failed to load products",
+    "no_products": "No products found",
+    "sort_by": "Sort By:",
+    "sort_default": "Default",
+    "sort_title": "Title (A-Z)",
+    "sort_price": "Price",
+    "sort_stock": "Stock",
+    "order": "Order:",
+    "order_asc": "Ascending ↑",
+    "order_desc": "Descending ↓",
+    "discount": "Save {{percent}}%",
+    "view_details": "View Details",
+    "in_stock": "In Stock",
+    "available": "{{count}} available",
+    "out_of_stock": "Out of Stock"
+  },
+  "product_detail": {
+    "loading": "Loading product details...",
+    "error": "Product not found",
+    "back": "← Back to Products",
+    "category": "Category:",
+    "brand": "Brand:",
+    "quantity": "Quantity:",
+    "add_to_cart": "Add to Cart",
+    "added": "✓ Added to Cart!",
+    "in_stock": "In Stock",
+    "out_of_stock": "Out of Stock"
+  },
+  "search": {
+    "placeholder": "Search products...",
+    "page_title": "Search Results",
+    "query": "Results for \"{{query}}\"",
+    "count": "Found {{count}} products",
+    "no_results": "No products found",
+    "try_again": "Try Another Search",
+    "back_to_home": "← Back to Home"
+  },
+  "cart": {
+    "page_title": "Shopping Cart",
+    "items": "{{count}} items in cart",
+    "empty_title": "Your cart is empty",
+    "empty_message": "Add some products to get started!",
+    "continue_shopping": "Continue Shopping",
+    "remove": "🗑️",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "free": "FREE",
+    "tax": "Tax",
+    "total": "Total",
+    "checkout": "Proceed to Checkout",
+    "clear_cart": "Clear Cart"
+  },
+  "notifications": {
+    "added_to_cart": "Added to cart!",
+    "removed_from_cart": "Removed from cart",
+    "cart_cleared": "Cart cleared"
+  },
+  "buttons": {
+    "search": "🔍",
+    "clear": "✕"
+  },
+  "footer": {
+    "copyright": "© 2024 ShopHub. All rights reserved."
+  }
+}

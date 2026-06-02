@@ -1,0 +1,42 @@
+@import './variables.scss';
+
+.language-switcher {
+  padding: $space-sm $space-md;
+  background: rgba($white, 0.2);
+  color: $white;
+  border: 2px solid rgba($white, 0.3);
+  border-radius: $border-radius-md;
+  font-size: 12px;
+  font-weight: $fw-bold;
+  cursor: pointer;
+  transition: all $transition-base;
+
+  &:hover {
+    background: rgba($white, 0.3);
+    border-color: rgba($white, 0.5);
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+[data-theme='dark'] {
+  .language-switcher {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.15);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+}
+
+@include media-query("mobile") {
+  .language-switcher {
+    padding: $space-xs $space-sm;
+    font-size: 10px;
+  }
+}
