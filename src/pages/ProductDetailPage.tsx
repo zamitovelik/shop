@@ -56,10 +56,12 @@ export function ProductDetailPage() {
     ? product.images
     : [product.thumbnail];
  
-  const handleAddToCart = () => {
-    addToCart(product, quantity);
-    addToast(t('notifications.added_to_cart'), 'success');
-  };
+ const handleAddToCart = () => {
+  addToCart(product, quantity);
+  addToast(t('notifications.added_to_cart'), 'success');
+
+  setQuantity(1);
+}
  
   return (
     <div className="product-detail-page">

@@ -10,7 +10,7 @@ import { ProductCard } from "../components/ProductCard/ProductCard";
 export const NewProducts = () => {
   const { products } = useProductStore();
 
-  const newProducts = products.slice(0, 10); // берём больше, но показываем по 5 в слайде
+  const newProducts = products.slice(0, 10); 
 
   return (
     <div className="mini-carousel">

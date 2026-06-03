@@ -25,3 +25,33 @@
   from { transform: translateX(110%); opacity: 0; }
   to   { transform: translateX(0);    opacity: 1; }
 }
+.galochka-toast {
+   max-width: 15px;
+  width: 100%;
+  padding-top: 6px;
+ 
+ 
+  
+}
+.i-toast {
+  max-width: 15px;
+  width: 100%;
+  display: flex;
+  
+  justify-content: space-between;
+}
+.krest-toast {
+  max-width: 15px;
+  width: 100%;
+  background: none;
+}
+.toast-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.toast-close {
+  background: none;
+}

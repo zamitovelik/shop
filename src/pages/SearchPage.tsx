@@ -17,7 +17,6 @@ export function SearchPage() {
   } = useSearchStore();
 
   useEffect(() => {
-    // If no search query, redirect to home
     if (!searchQuery) {
       window.location.href = '/';
     }
@@ -31,16 +30,6 @@ export function SearchPage() {
 
   return (
     <div className="search-page">
-      <header className="search-header">
-        <h1>Search Results</h1>
-        <p>
-          Searching for: <strong>"{searchQuery}"</strong>
-        </p>
-        <p className="result-count">
-          Found {searchTotal} result{searchTotal !== 1 ? 's' : ''}
-        </p>
-      </header>
-
       <div className="search-content">
         <Link to="/" className="back-to-home">
           ← Back to All Products

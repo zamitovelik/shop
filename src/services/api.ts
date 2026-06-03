@@ -42,7 +42,7 @@ export const productService = {
       const response = await apiClient.get<Array<{ slug: string; name: string; url: string }>>(
         '/products/categories'
       );
-      // API returns array of objects with slug/name
+      
       return response.data.map((c) => (typeof c === 'string' ? c : c.slug));
     } catch (error) {
       console.error('Error fetching categories:', error);

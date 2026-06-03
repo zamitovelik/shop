@@ -88,7 +88,6 @@ export const useProductStore = create<ProductStore>((set, get) => ({
       const cats = await productService.getCategories();
       set({ categories: cats });
     } catch {
-      // silently fail
     }
   },
 

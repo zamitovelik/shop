@@ -14,6 +14,15 @@ export function CartPage() {
     removeFromCart(id);
     addToast(t('notifications.removed_from_cart'), 'error');
   };
+  
+const handleCheckout = () => {
+  addToast(t('notifications.processing_order'), 'info');
+
+  setTimeout(() => {
+    clearCart();
+    addToast(t('notifications.order_success'), 'success');
+  }, 800);
+};
 
   const handleClear = () => {
     clearCart();
@@ -51,6 +60,7 @@ export function CartPage() {
             : t('cart.items', { count: totalItems })}
         </p>
       </div>
+      
 
       <div className="cart-container">
         <div className="cart-items">
@@ -153,7 +163,7 @@ export function CartPage() {
             <span className="total-price">${grandTotal.toFixed(2)}</span>
           </div>
 
-          <button className="checkout-btn">{t('cart.checkout')}</button>
+          <button className="checkout-btn" onClick={handleCheckout}>{t('cart.checkout')}</button>
 
           <Link to="/" className="continue-shopping-link">
             ← {t('cart.continue_shopping')}
