@@ -75,7 +75,7 @@
     "added_to_cart": "Added to cart!",
     "removed_from_cart": "Removed from cart",
     "cart_cleared": "Cart cleared",
-    "proccesing_order": "your item is being processed",
+    "processing_order": "Your order is proccessing",
     "order_success": "Thank you for choosing us. We look forward to seeing you again!"
   },
   "buttons": {

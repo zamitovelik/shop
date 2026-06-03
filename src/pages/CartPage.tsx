@@ -131,7 +131,7 @@ const handleCheckout = () => {
                     className="remove-btn"
                     onClick={() => handleRemove(item.product.id)}
                     title={t('cart.remove')}
-                  ></button>
+                  ><img src={korzina} alt="" className='korzina-for' /></button>
                 </div>
               </div>
             );
